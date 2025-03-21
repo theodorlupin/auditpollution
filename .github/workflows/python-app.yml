@@ -24,22 +24,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Instalar o Chrome
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y google-chrome-stable
-
-      - name: Instalar o ChromeDriver
-        run: |
-         CHROME_VERSION=$(google-chrome --version | awk '{print $3}')
-          CHROMEDRIVER_VERSION=$(chromedriver --version | awk '{print $2}')
-          if [ -z "$CHROMEDRIVER_VERSION" ]; then
-            CHROMEDRIVER_VERSION=$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION)
-          fi
-          wget -N https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip
-          unzip chromedriver_linux64.zip -d $HOME/chromedriver
-          sudo mv -f $HOME/chromedriver/chromedriver /usr/local/bin/chromedriver
-          sudo chmod +x /usr/local/bin/chromedriver
+      - name: Configurar Google Chrome e ChromeDriver
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: '114.0.5735.90'  # Substitua pela versão desejada
+          install-dependencies: true
+          install-chromedriver: true
 
       - name: Executar testes
         run: behave
