@@ -27,7 +27,7 @@ jobs:
       - name: Configurar Google Chrome e ChromeDriver
         uses: browser-actions/setup-chrome@v1
         with:
-          chrome-version: 'stable'  # Substitua pela versão desejada
+          chrome-version: 'stable'
           install-dependencies: true
           install-chromedriver: true
 
