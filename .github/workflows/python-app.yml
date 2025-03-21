@@ -32,4 +32,4 @@ jobs:
           install-chromedriver: true
 
       - name: Executar testes
-        run: behave
+        run: behave Features/ --steps-path=Features/steps
