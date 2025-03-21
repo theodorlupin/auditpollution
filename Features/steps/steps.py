@@ -54,8 +54,6 @@ def poluir_auditoria(context):
         # context.comunity_element = context.web.find_element(By.XPATH, comunity_element)  #se for pra visualizar câmeras da comunidade é só descomentar esses 2 trechos e comentar o de cima.
         # context.comunity_element.click()        
 
-
-
 @then(u'eu polui a auditoria')
 def step_impl(context):
     time.sleep(5)
