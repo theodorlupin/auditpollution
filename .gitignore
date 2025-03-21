@@ -1,0 +1,77 @@
+# Arquivos compilados Python
+__pycache__/
+*.py[cod]
+
+# Extensões C
+*.so
+
+# Distribuição / Empacotamento
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Logs de instaladores
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Relatórios de testes e cobertura
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+.hypothesis/
+
+# Traduções
+*.mo
+*.pot
+
+# Arquivos de configuração locais
+*.log
+local_settings.py
+
+# Arquivos específicos de frameworks
+instance/
+.webassets-cache
+.scrapy
+docs/_build/
+target/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Arquivos de ambiente virtual
+venv/
+ENV/
+
+# Configurações de IDEs
+.idea/
+.vscode/
+.spyderproject
+.ropeproject
+
+# Arquivos de ambiente
+.env
